@@ -5,6 +5,9 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    scroll-behavior: smooth;
+}
 body {
     min-height: 100dvh;
     font-family: Poppins;
