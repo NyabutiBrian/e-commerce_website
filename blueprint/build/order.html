@@ -87,86 +87,90 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section id="hero">
-        <div class="bg-cover bg-no-repeat bg-center py-52" style="background-image: url('assets/images/banner-bg.jpg');">
-            <div class="max-w-screen-xl mx-auto">
-                <div class="mx-4 zoom-in-bg">
-                    <div class="h1 text-primary font-medium mb-4 uppercase">
-                        <h1>Best <span class="font-Shrikhand text-4xl md:text-5xl">collection</span></h1>
-                        <h1><span class="font-Shrikhand text-4xl md:text-5xl">Body</span> glamour</h1>
-                    </div>
-                    <p class="text-pg max-w-lg">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam
-                        accusantium perspiciatis, sapiente
-                        magni eos dolorum ex quos dolores odio
-                    </p>
-                    <div class="mt-12">
-                        <a href="#categories" class="bg-primary border border-primary text-white px-8 py-3 font-medium rounded-3xl hover:bg-transparent hover:text-primary">Order Now</a>
+    <!-- Product Order -->
+    <section class="max-w-screen-xl mx-auto">
+        <div class="py-16 mx-4 mt-10">
+            <!-- Breadcrumb -->
+            <div class="container py-4 flex items-center gap-3">
+                <a href="./index.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width='1rem' fill='#234645' viewBox="0 0 576 512"><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"/></svg>
+                </a>
+                <span class="text-sm text-gray-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" width='0.6rem' fill='#234645' viewBox="0 0 320 512"><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg>
+                </span>
+                <p class="text-primary font-medium font-Shrikhand">Checkout</p>
+            </div>
+
+            <!-- Product Checkout -->
+            <div class="grid md:grid-cols-12 items-start pt-4 gap-4">
+                <!-- Left -->
+                <div class="md:col-span-7 text-primary border-primary border-t-2 md:border-t-0 md:border-l-2 px-4 py-8 rounded-3xl shadow-2xl">
+                    <h3 class="text-lg font-semibold mb-4">CHECKOUT</h3>
+                    <div class="space-y-4">
+                        <p class="font-medium">
+                            Orders are made via WhatsApp Message, Instagram Direct Message or a Call. <br>
+                            By placing your Order Here, you will be redirected to our WhatsApp Contact number.
+                            Enter your name and send message. <br><br>
+
+                            We will get in touch with you as soon as possible.
+                        </p>
                     </div>
                 </div>
+        
+                <!-- Right -->
+                <div class="md:col-span-5 text-primary border-primary border-t-2 md:border-t-0 md:border-l-2 px-4 py-8 rounded-3xl shadow-2xl">
+                    <h3 class="text-lg font-semibold mb-4">ORDER SUMMARY</h3>
+                    <div class="space-y-2">
+                        <div class="flex justify-between">
+                            <div>
+                                <h5 class="text-gray-800 font-medium">Bag 1</h5>
+                                <p class="text-sm text-gray-600">SKU: MINTY001</p>
+                            </div>
+                            <p class="text-gray-600">
+                                x1
+                            </p>
+                            <p class="text-gray-800 font-medium">Ksh 500</p>
+                        </div>
+                    </div>
+        
+                    <div class="flex justify-between border-b border-gray-200 mt-1 text-gray-800 font-medium py-3 uppercas">
+                        <p>subtotal</p>
+                        <p>Ksh 500</p>
+                    </div>
+        
+                    <div class="flex justify-between border-b border-gray-200 mt-1 text-gray-800 font-medium py-3 uppercas">
+                        <p>shipping</p>
+                        <p>Ksh 100</p>
+                    </div>
+        
+                    <div class="flex justify-between text-gray-800 font-medium py-3 uppercas">
+                        <p class="font-semibold">Total</p>
+                        <p>Ksh 600</p>
+                    </div>
+        
+                    <!-- <div class="flex items-center mb-4 mt-2">
+                        <input type="checkbox" name="aggrement" id="aggrement"
+                            class="text-primary focus:ring-0 rounded-sm cursor-pointer w-3 h-3">
+                        <label for="aggrement" class="text-gray-600 ml-3 cursor-pointer text-sm">I agree to the <a href="#"
+                                class="text-primary">terms & conditions</a></label>
+                    </div> -->
+        
+                    <a href="#" class="block w-full py-3 px-4 text-center text-white bg-primary border border-primary rounded-3xl hover:bg-transparent hover:text-primary transition font-medium">Place Order</a>
+                </div>
             </div>
+            
         </div>
     </section>
 
-    <!-- Features -->
+    <!-- Recommended Products -->
     <section class="max-w-screen-xl mx-auto">
         <div class="py-16 mx-4">
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mx-auto justify-center">
-                <div class="rounded-3xl border-primary border-t-2 lg:border-t-0 lg:border-l-2 px-3 py-6 flex justify-center items-center gap-5 shadow-lg transition duration-200 transform hover:scale-105">
-                    <img src="assets/images/icons/delivery-van.svg" title="SVG Features Icons" alt="Delivery van" class="w-12 h-12 object-contain">
-                    <div>
-                        <p class="font-medium capitalize text-lg">Fast Delivery</p>
-                        <p class="text-gray-500 text-sm">Order over Ksh 1,000</p>
-                    </div>
-                </div>
-
-                <div class="rounded-3xl border-primary border-t-2 lg:border-t-0 lg:border-l-2 px-3 py-6 flex justify-center items-center gap-5 shadow-lg transition duration-200 transform hover:scale-105">
-                    <img src="assets/images/icons/money-back.svg" title="SVG Features Icons" alt="Money Refund" class="w-12 h-12 object-contain">
-                    <div>
-                        <p class="font-medium capitalize text-lg">Money Returns</p>
-                        <p class="text-gray-500 text-sm">30 days money returns</p>
-                    </div>
-                </div>
-
-                <div class="rounded-3xl border-primary border-t-2 lg:border-t-0 lg:border-l-2 px-3 py-6 flex justify-center items-center gap-5 shadow-lg transition duration-200 transform hover:scale-105">
-                    <img src="assets/images/icons/service-hours.svg" title="SVG Features Icons" alt="Customer Support" class="w-12 h-12 object-contain">
-                    <div>
-                        <p class="font-medium capitalize text-lg">Extra Services</p>
-                        <p class="text-gray-500 text-sm">Customer support</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Categories -->
-    <section class="max-w-screen-xl mx-auto scroll-m-20" id="categories">
-        <div class="py-16 mx-4">
-            <h2 class="text-2xl font-medium text-primary font-Shrikhand text-center mb-6">Categories</h2>
-            <div class="grid grid-cols-2 lg:grid-cols-3 gap-3">
-                <div class="relative rounded-tr-3xl rounded-bl-3xl overflow-hidden group bg-cover bg-no-repeat bg-center py-32" style="background-image: url('assets/images/category/bag10.webp');">
-                    <a href="./category.html" class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center text-xl text-white font-Shrikhand font-medium group-hover:bg-opacity-60 transition">Category 1</a>
-                </div>
-                <div class="relative rounded-tr-3xl rounded-bl-3xl overflow-hidden group bg-cover bg-no-repeat bg-center py-32" style="background-image: url('assets/images/category/bag11.webp');">
-                    <a href="./category.html" class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center text-xl text-white font-Shrikhand font-medium group-hover:bg-opacity-60 transition">Category 2</a>
-                </div>
-                <div class="relative rounded-tr-3xl rounded-bl-3xl overflow-hidden group bg-cover bg-no-repeat bg-center py-32" style="background-image: url('assets/images/category/bag12.webp');">
-                    <a href="./category.html" class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center text-xl text-white font-Shrikhand font-medium group-hover:bg-opacity-60 transition">Category 3</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- New Arrivals -->
-    <section class="max-w-screen-xl mx-auto">
-        <div class="py-16 mx-4">
-            <h2 class="text-2xl font-medium text-primary font-Shrikhand text-center mb-6">New Arrivals</h2>
+            <h2 class="text-2xl font-medium text-primary font-Shrikhand text-center mb-6">Recommended</h2>
             <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-4">
 
                 <!-- Product 1 -->
                 <div class="bg-white shadow-2xl rounded-3xl overflow-hidden group transition duration-200 transform hover:scale-105">
-                    <div class="relative bg-cover bg-no-repeat bg-center py-44" style="background-image: url('assets/images/products/bag1.webp');">
+                    <div class="relative bg-cover bg-no-repeat bg-center py-44" style="background-image: url('assets/images/products/bag5.webp');">
                     </div>
 
                     <div class="py-4 px-4 text-primary ">
@@ -183,7 +187,7 @@
 
                 <!-- Product 2 -->
                 <div class="bg-white shadow-2xl rounded-3xl overflow-hidden group transition duration-200 transform hover:scale-105">
-                    <div class="relative bg-cover bg-no-repeat bg-center py-44" style="background-image: url('assets/images/products/bag2.webp');">
+                    <div class="relative bg-cover bg-no-repeat bg-center py-44" style="background-image: url('assets/images/products/bag6.webp');">
                     </div>
 
                     <div class="py-4 px-4 text-primary ">
@@ -200,7 +204,7 @@
 
                 <!-- Product 3 -->
                 <div class="bg-white shadow-2xl rounded-3xl overflow-hidden group transition duration-200 transform hover:scale-105">
-                    <div class="relative bg-cover bg-no-repeat bg-center py-44" style="background-image: url('assets/images/products/bag3.webp');">
+                    <div class="relative bg-cover bg-no-repeat bg-center py-44" style="background-image: url('assets/images/products/bag7.webp');">
                     </div>
 
                     <div class="py-4 px-4 text-primary ">
@@ -217,7 +221,7 @@
 
                 <!-- Product 4 -->
                 <div class="bg-white shadow-2xl rounded-3xl overflow-hidden group transition duration-200 transform hover:scale-105">
-                    <div class="relative bg-cover bg-no-repeat bg-center py-44" style="background-image: url('assets/images/products/bag4.webp');">
+                    <div class="relative bg-cover bg-no-repeat bg-center py-44" style="background-image: url('assets/images/products/bag8.webp');">
                     </div>
 
                     <div class="py-4 px-4 text-primary ">
