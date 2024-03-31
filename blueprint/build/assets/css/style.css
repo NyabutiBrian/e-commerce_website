@@ -1513,6 +1513,10 @@ p {
   .lg\:border-r-2{
     border-right-width: 2px;
   }
+
+  .lg\:border-b-8{
+    border-bottom-width: 8px;
+  }
 }
 
 @media (min-width: 1280px){
