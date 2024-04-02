@@ -1,6 +1,6 @@
 import React from 'react'
 
-import banner from '../../assets/images/banner-bg.jpg'
+import banner from '../../assets/images/banner-bg.webp'
 
 const Hero = () => {
   return (
