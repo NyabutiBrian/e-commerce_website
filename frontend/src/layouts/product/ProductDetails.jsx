@@ -76,6 +76,7 @@ const ProductDetails = () => {
                 <Helmet>
                     <meta property="og:image" content={bag9} /> {/* Assuming bag9 is the image URL */}
                     <meta property="og:title" content="APEX Bag" />
+                    <meta property="og:description" content="Explore our fashionable bags and meet your aspirations with Us! MINTY, Connecting new looks and design with enthusiastic lovers." />
                 </Helmet>
 
             </div>
