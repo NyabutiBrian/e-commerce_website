@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Helmet } from 'react-helmet';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 import bag9 from '../../assets/images/products/bag9.webp'
 
@@ -73,11 +73,14 @@ const ProductDetails = () => {
                     </div>
                 </div>
 
-                <Helmet>
-                    <meta property="og:image" content={bag9} /> {/* Assuming bag9 is the image URL */}
-                    <meta property="og:title" content="APEX Bag" />
-                    <meta property="og:description" content="Explore our fashionable bags and meet your aspirations with Us! MINTY, Connecting new looks and design with enthusiastic lovers." />
-                </Helmet>
+                <HelmetProvider>
+                    <Helmet defer={false}>
+                        <meta property="og:image" content={bag9} /> {/* Assuming bag9 is the image URL */}
+                        <meta property="og:title" content="APEX Bag" />
+                        <meta property="og:description" content="Explore our fashionable bags and meet your aspirations with Us! MINTY, Connecting new looks and design with enthusiastic lovers." />
+                    </Helmet>
+                </HelmetProvider>
+                
 
             </div>
         </div>
