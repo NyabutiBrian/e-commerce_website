@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet';
 
 import bag9 from '../../assets/images/products/bag9.webp'
 
@@ -71,6 +72,11 @@ const ProductDetails = () => {
                         </a>
                     </div>
                 </div>
+
+                <Helmet>
+                    <meta property="og:image" content={bag9} /> {/* Assuming bag9 is the image URL */}
+                    <meta property="og:title" content="APEX Bag" />
+                </Helmet>
 
             </div>
         </div>
