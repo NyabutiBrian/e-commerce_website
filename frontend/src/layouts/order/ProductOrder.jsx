@@ -2,6 +2,60 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const ProductOrder = () => {
+
+    const handleWhatsAppShare = () => {
+        // Get the article header and content
+        const productName = document.getElementById('productName').innerText;
+        const productSKU = document.getElementById('productSKU').innerText;
+        const productPrice = document.getElementById('productPrice').innerText;
+        const productSubtotal = document.getElementById('productSubtotal').innerText;
+        const productDelivery = document.getElementById('productDelivery').innerText;
+        const productTotalPrice = document.getElementById('productTotalPrice').innerText;
+
+        // Get the current page URL
+        const currentPageUrl = window.location.href;
+
+        // Customize the font
+        const assistHeader = 'MINTY CHECKOUT ORDER PURCHASE SUMMARY';
+        const boldAssistHeader = `*${assistHeader}*`;
+        const assistText = 'MINTY Product link:';
+        const boldAssistText = `*${assistText}*`;
+
+        const assistProductName = 'Product: ';
+        const assistProductSKU = 'SKU No: ';
+        const assistProductPrice = 'Product Price: ';
+        const assistProductSubtotal = 'Subtotal Price: ';
+        const assistProductDelivery = 'Delvery Charges: ';
+        const assistProductTotalPrice = 'Total Price: ';
+
+        // Encode the article information for the URL
+        const encodedProductMessage = encodeURIComponent(
+            boldAssistHeader + 
+            '\n\n' + 
+            assistProductName + productName + 
+            '\n' + 
+            assistProductSKU + productSKU + 
+            '\n' + 
+            assistProductPrice + productPrice + 
+            '\n' + 
+            assistProductSubtotal + productSubtotal + 
+            '\n' + 
+            assistProductDelivery + productDelivery + 
+            '\n' + 
+            assistProductTotalPrice + productTotalPrice + 
+            '\n\n' + 
+            boldAssistText + 
+            '\n' + 
+            currentPageUrl
+        );
+
+        // Generate the WhatsApp share URL
+        const whatsappUrl = 'https://wa.me/?text=' + encodedProductMessage;
+
+        // Open the share dialog
+        window.open(whatsappUrl, '_blank');
+    };
+
   return (
     <section className="max-w-screen-xl mx-auto">
         <div className="mx-4">
@@ -38,32 +92,32 @@ const ProductOrder = () => {
                     <div className="space-y-2">
                         <div className="flex justify-between">
                             <div>
-                                <h5 className="text-gray-800 font-medium">Bag 1</h5>
-                                <p className="text-sm text-gray-600">SKU: MINTY001</p>
+                                <h5 id="productName" className="text-gray-800 font-medium">Bag 1</h5>
+                                <p id="productSKU" className="text-sm text-gray-600">SKU: MINTY001</p>
                             </div>
                             <p className="text-gray-600">
                                 x1
                             </p>
-                            <p className="text-gray-800 font-medium">Ksh 500</p>
+                            <p id="productPrice" className="text-gray-800 font-medium">Ksh 500</p>
                         </div>
                     </div>
         
                     <div className="flex justify-between border-b border-gray-200 mt-1 text-gray-800 font-medium py-3 uppercas">
                         <p>Subtotal</p>
-                        <p>Ksh 500</p>
+                        <p id="productSubtotal">Ksh 500</p>
                     </div>
         
                     <div className="flex justify-between border-b border-gray-200 mt-1 text-gray-800 font-medium py-3 uppercas">
                         <p>Delivery Charges</p>
-                        <p>Ksh 100</p>
+                        <p id="productDelivery">Ksh 100</p>
                     </div>
         
                     <div className="flex justify-between text-gray-800 font-medium py-3 uppercas">
                         <p className="font-semibold">Total</p>
-                        <p>Ksh 600</p>
+                        <p id="productTotalPrice">Ksh 600</p>
                     </div>
         
-                    <a href="#" className="block w-full py-3 px-4 text-center text-white bg-primary border border-primary rounded-3xl hover:bg-transparent hover:text-primary transition font-medium">Place Order via WhatsApp</a>
+                    <button onClick={handleWhatsAppShare} aria-label="WhatsApp share" className="block w-full py-3 px-4 text-center text-white bg-primary border border-primary rounded-3xl hover:bg-transparent hover:text-primary transition font-medium">Place Order via WhatsApp</button>
                 </div>
             </div>
             
