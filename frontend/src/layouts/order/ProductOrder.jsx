@@ -49,8 +49,8 @@ const ProductOrder = () => {
             currentPageUrl
         );
 
-        // Generate the WhatsApp share URL
-        const whatsappUrl = 'https://wa.me/?text=' + encodedProductMessage;
+        // Generate the WhatsApp share URL with direct contact number
+        const whatsappUrl = `https://wa.me/254700013897?text=${encodedProductMessage}`;
 
         // Open the share dialog
         window.open(whatsappUrl, '_blank');
